@@ -98,10 +98,4 @@ Header always set Content-Security-Policy "default-src 'self' http: https: data:
 # Limit file upload size
 LimitRequestBody 10485760
 
-# Prevent access to PHP files in uploads directory
-<Directory "uploads">
-    <Files "*.php">
-        Order allow,deny
-        Deny from all
-    </Files>
-</Directory>
+# Note: PHP in uploads is already blocked by uploads/.htaccess

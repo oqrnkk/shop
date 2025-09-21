@@ -4,12 +4,8 @@
     Allow from all
 </FilesMatch>
 
-# Allow write access for uploads
-<Directory "images">
-    Options +Indexes
-    AllowOverride All
-    Require all granted
-</Directory>
+# Allow directory listing in images (no <Directory> in .htaccess)
+Options +Indexes
 
 # Prevent access to other file types
 <FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|sh|cgi)$">
